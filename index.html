@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/bootstrap.min.css">
+  <title>Movies</title>
+</head>
+
+<body>
+  <section class="movie">
+    <div class="container">
+      <h1 class="movie__title text-center mt-3">Movies catalog</h1>
+
+      <div class="movie__box row my-5">
+        <div class="movie__info col-4">
+          <form action="https://echo.htmlacademy.ru/" class="form mb-4" method="post">
+
+            <input class="form-control mb-3" type="text" placeholder="Enter the movie name" aria-label="movie name">
+
+            <input class="form-control mb-3" type="text" placeholder="Enter the movie number" aria-label="movie number">
+
+            <select class="form-select mb-3" aria-label="Movie type">
+              <option selected>All</option>
+              <option value="1">One</option>
+              <option value="2">Two</option>
+              <option value="3">Three</option>
+            </select>
+
+            <label for="movieDataList" class="form-label w-100 mb-3">
+              <input class="form-control" list="datalistOptions" id="movieDataList" placeholder="Rating (high to low)">
+              <datalist id="datalistOptions">
+                <option value="High">
+                <option value="Low">
+              </datalist>
+            </label>
+
+            <button type="submit" class="btn btn-primary w-100">Search</button>
+
+          </form>
+
+          <h2 class="movie__subtitle mb-3">Bookmarked movies</h2>
+
+          <ul class="movie__list list-group">
+
+            <li class="movie__item list-group-item">
+              <h3 class="movie__subtitles">Avengers: Infinity war</h3>
+              <button class="movie__btn btn btn-danger" type="button">Remove</button>
+            </li>
+
+            <li class="movie__item list-group-item">
+              <h3 class="movie__subtitles">The Avengers</h3>
+              <button class="movie__btn btn btn-danger" type="button">Remove</button>
+            </li>
+
+            <li class="movie__item list-group-item">
+              <h3 class="movie__subtitles">12 Years a Slave</h3>
+              <button class="movie__btn btn btn-danger" type="button">Remove</button>
+            </li>
+
+          </ul>
+
+        </div>
+
+        <div class="movie__information col-8">
+          <h2 class="movie__subtitle ">Search resaults: 39</h2>
+          <div class="movie__alert alert alert-success" role="alert">
+            Use the form on the left to search for a movie
+          </div>
+
+          <div class="movie__row row mb-5">
+
+            <div class="movie__col col-6">
+
+              <div class="movie__card card">
+                <img src="./images/avengers.jpg" class="movie__img img-fluid"
+                  alt="A lot of people run in the forest">
+
+                <div class="movie__body card-body">
+                  <h3 class="movie__titles card-title">Avengers: Infinity war</h3>
+                  <div class="movie__year d-flex mb-3">
+                    <img src="./images/date.png" alt="timetable icon" class="movie__icon me-3" width="20" height="20">
+                    <time class="movie__time" datetime="2018">2018</time>
+                  </div>
+
+                  <div class="movie__score d-flex">
+                    <img src="./images/star.png" alt="yellow star icon" class="movie__icon me-3" width="20" height="20">
+                    <p class="movie__text">8.7</p>
+                  </div>
+
+                  <div class="movie__buttons d-flex justify-content-between">
+                    <button type="button" class="btn btn-outline-primary">Watch trailer</button>
+                    <button type="button" class="btn btn-outline-info">More info</button>
+                    <button type="button" class="btn btn-outline-success">Bookmark</button>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+
+
+
+
+            <div class="movie__col col-6">
+
+              <div class="movie__card card">
+                <img src="./images/the-avengers.jpg" class="movie__img img-fluid" alt="avenger image">
+
+                <div class="movie__body card-body">
+                  <h3 class="movie__titles card-title">Card title</h3>
+                  <div class="movie__year d-flex mb-3">
+                    <img src="./images/date.png" alt="timetable icon" class="movie__icon me-3" width="20" height="20">
+                    <time class="movie__time" datetime="2012">2012</time>
+                  </div>
+
+                  <div class="movie__score d-flex">
+                    <img src="./images/star.png" alt="yellow star icon" class="movie__icon me-3" width="20" height="20">
+                    <p class="movie__text">8.7</p>
+                  </div>
+
+                  <div class="movie__buttons d-flex justify-content-between">
+                    <button type="button" class="btn btn-outline-primary">Watch trailer</button>
+                    <button type="button" class="btn btn-outline-info">More info</button>
+                    <button type="button" class="btn btn-outline-success">Bookmark</button>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <nav aria-label="site-pages" class="movie__nav">
+            <ul class="movie__sublink pagination justify-content-center">
+              <li class="movie__subitem page-item active" aria-current="page">
+                <span class="movie__subitems page-link">1</span>
+              </li>
+              <li class="movie__subitem page-item"><a class="page-link" href="#">2</a></li>
+              <li class="movie__subitem page-item"><a class="page-link" href="#">3</a></li>
+              <li class="movie__subitem page-item"><a class="page-link" href="#">4</a></li>
+            </ul>
+          </nav>
+
+        </div>
+      </div>
+    </div>
+  </section>
+</body>
+
+</html>
